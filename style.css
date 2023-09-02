@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:focus {
+  background-color: burlywood;
+  color: purple;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(221, 128, 128, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.search-container {
+  height: auto;
+  width: 300px;
+  text-align: center;
+}
+
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  color: rgb(131, 58, 180);
+  border: 2px solid rgb(131, 58, 180);
+  background-color: rgb(233, 132, 162);
+  border-radius: 5px;
+}
+
+.search-container .suggestions {
+  height: auto;
+  text-align: center;
+  position: absolute;
+  width: 300px;
+  max-height: 150px;
+  overflow-y: auto;
+  color: bisque;
+  border-radius: 0 0 5px 5px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(221, 128, 128, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.highlight {
+  background-color: purple;
+  color: bisque;
+}
+
+.search-container .suggestions::-webkit-scrollbar {
+  width: 0;
+}
+
+.search-container .suggestions::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+/* added the webkitscrollbar to remove the scrollbar, found that code online, also found the code for the gradient colors in this page https://cssgradient.io */
